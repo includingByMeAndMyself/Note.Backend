@@ -1,8 +1,10 @@
-﻿using System;
+﻿using MediatR;
+using System;
 
-namespace Note.Domain
+
+namespace Note.Application.Notes.Commands.UpdateNote
 {
-    public class Note
+    public class UpdateNoteCommand : IRequest
     {
         public Guid UserId { get; set; }
 
@@ -11,9 +13,5 @@ namespace Note.Domain
         public string Title { get; set; }
 
         public string Details { get; set; }
-
-        public DateTime CreationDate { get; set; }
-
-        public DateTime? EditeDate { get; set; }
     }
 }
