@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Threading;
 using System.Threading.Tasks;
+using Note.Domain;
 
 
 namespace Note.Application.Interface

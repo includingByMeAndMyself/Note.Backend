@@ -10,7 +10,7 @@ namespace Note.Persistence
 
         public NotesDbContext(DbContextOptions<NotesDbContext> options) : base(options)
         {
-
+            Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

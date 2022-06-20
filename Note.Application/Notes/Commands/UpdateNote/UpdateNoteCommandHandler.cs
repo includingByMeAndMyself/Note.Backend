@@ -3,11 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Note.Application.Common.Exceptions;
 using Note.Application.Interface;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+
 
 namespace Note.Application.Notes.Commands.UpdateNote
 {
