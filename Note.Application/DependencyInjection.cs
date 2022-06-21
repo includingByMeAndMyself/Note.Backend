@@ -1,5 +1,7 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Note.Application.Common.Behaviors;
 using System.Reflection;
 
 namespace Note.Application
@@ -10,6 +12,9 @@ namespace Note.Application
             this IServiceCollection services)
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddValidatorsFromAssemblies(new[] {Assembly.GetExecutingAssembly()});
+            services.AddTransient(typeof(IPipelineBehavior<,>),
+                typeof(ValidationBehavior<,>));
             return services;
         }
     }
